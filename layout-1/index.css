@@ -1,0 +1,92 @@
+
+*, ::before::after{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  :root{
+    --main-radius: 5px;
+    --main-padding:5px
+  }
+  .Container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas: 
+    "header header header header"
+    "nav main main aside"
+    "footer footer2 footer3 footer4";
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    grid-gap: 10px;
+  }
+
+  header{
+    background-color: crimson;
+    grid-area: header;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  nav{
+    background-color: yellow;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  main{
+    background-color: aquamarine;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  aside{
+    background-color: blueviolet;
+    grid-area: aside;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  footer{
+    background-color: coral;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  .footer2{
+    background-color: coral;
+    grid-area: footer2;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  .footer3{
+    background-color: coral;
+    grid-area: footer3;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  .footer4{
+    background-color: coral;
+    grid-area: footer4;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  @media only screen and (max-width: 550px){
+    .Container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "aside"
+        "main"
+        "footer"
+        "footer2"
+        "footer3"
+        "footer4";
+    }
+  }

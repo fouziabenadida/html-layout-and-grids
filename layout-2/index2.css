@@ -1,0 +1,86 @@
+*, ::before::after{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  :root{
+    --main-radius: 5px;
+    --main-padding: 5px
+  }
+  .container{
+   
+    height: 100vh;
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 0.2fr 1fr 1.5fr 0.8fr;
+   grid-template-areas: "nav nav nav nav"
+   "aside main main main"
+   "aside ct1 ct2 ct3"
+   "aside footer footer footer";
+   grid-gap: 20px;
+   text-align: center;
+   font-family: sans-serif;
+   font-size: 20px;
+   text-transform: uppercase;
+   font-weight: 800;
+  }
+  nav{
+    background-color: crimson;
+    grid-area: nav ;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  main{
+    background-color: CORAL;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  aside{
+    background-color: aqua;
+    grid-area: aside;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  .ct1{
+    background-color: chartreuse;
+    grid-area: ct1;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  .ct2{
+    background-color: darkorchid;
+    grid-area: ct2;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  .ct3{
+    background-color: deeppink;
+    grid-area: ct3;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+footer{
+    background-color: yellow;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+@media only screen and (max-width: 550px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: "nav"
+        "aside"
+        "main"
+        "ct1"
+        "ct2"
+        "ct3"
+        "footer";
+    }
+    
+}

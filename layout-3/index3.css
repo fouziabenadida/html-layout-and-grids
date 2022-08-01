@@ -1,0 +1,94 @@
+*, ::before::after{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  :root{
+    --main-radius: 5px;
+    --main--padding: 5px;
+  }
+  .Container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-template-rows: 0.2fr 1.5fr 1.5fr 1fr;
+    grid-template-areas: 
+    "header nav nav"
+    "hero hero hero"
+    "main blanc img"
+    "main blanc extra"
+    "footer footer footer";
+    grid-gap: 15px;
+    font-family: sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 22px;
+    
+  }
+  header{
+    background-color: crimson;
+    grid-area: header;
+    border-radius: var(--main-radius);
+    padding: var(--main--padding);
+  }
+  nav{
+    background-color: aqua;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding: var(--main--padding);
+  }
+  .hero{
+    background-color: blue;
+    grid-area: hero;
+    border-radius: var(--main-radius);
+    padding: var(--main--padding);
+  }
+  main{
+    background-color: chartreuse;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding: var(--main--padding);
+  }
+  .blanc{
+    background-color:white;
+    grid-area: blanc;
+    border-radius: var(--main-radius);
+    padding: var(--main--padding);
+  }
+  .img{
+    background-color: blueviolet;
+    border-radius: var(--main-radius);
+    padding: var(--main--padding);
+  }
+  .extra{
+    background-color: darkorange;
+    grid-area: extra;
+    border-radius: var(--main-radius);
+    padding: var(--main--padding);
+  }
+  footer{
+    background-color: deeppink;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding: var(--main--padding);
+  }
+  @media only screen and (max-width:600px){
+    .Container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 0.8fr 1.5fr 1.5fr 0.8fr 1fr 1fr 0.5fr ;
+      grid-template-areas: "header"
+      "nav"
+      "hero"
+      "main"
+      "blanc"
+      "img"
+      "extra"
+      "footer";
+  
+    }
+  }
